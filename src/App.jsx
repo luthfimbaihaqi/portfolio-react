@@ -5,19 +5,22 @@ import Work from './components/Work'
 import WorkItem from './components/WorkItem'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import { Route, Routes } from 'react-router-dom' 
+import Dashboard from './pages/Dashboard'
 
 function App() {
   
 
   return (
-    <div>
-      <Sidenav />
-      <Main />
-      <Work />
-      <WorkItem />
-      <Projects />
-      <Contact />
-    </div>
+    <>
+    <Sidenav />
+    <Routes >
+
+    <Route path='/' element={<Dashboard />} /> 
+    <Route path='/contact' element={<Contact />} />
+
+    </Routes>
+    </>
   )
 }
 
